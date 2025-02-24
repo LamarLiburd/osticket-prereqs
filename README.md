@@ -7,28 +7,21 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 
 
-<h2>Environments and Technologies Used</h2>
+<h2>Environments and Utilities Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure 
 - Remote Desktop
 - Internet Information Services (IIS)
-
+- Heidi SQL
 <h2>Operating Systems Used </h2>
 
 - Windows 10</b> (21H2)
 
 <h2>List of Prerequisites</h2>
 
-- Azure Virtual Machine
-- Internet Information Services (IIS)
-- PHP Manager
-- Rewrite Module
-- VC Redist
-- MySQL
-- Heidi SQL
-- osTicket v1.18.2
+- 
 
-<h2>Installation Steps</h2>
+<h2>Project Walk-through</h2>
 
 1.)First, go to [https://portal.azure.com/](https://portal.azure.com/) to create a virtual machine. Set it up with **Windows 10 Pro, version 22H2**. Make sure the virtual machine has at least **2 vCPUs** and **16 GB of memory**.
 
@@ -98,7 +91,7 @@ If a warning appears, select **"Keep"** to proceed.
 <p>
 
 9.) After downloading and extracting the ZIP file into the **PHP** folder on the **C:** drive, download and install **VC_redist.x86.exe** from the installation files. Follow the setup wizard to complete the installation.
-10.) Download and install MySQL 5.5.62 (MySQL-5.5.62-win32.msi)
+10.) Download and install MySQL
 Run the setup wizard:
 Typical Setup ->
 Launch Configuration Wizard (after install) ->
@@ -132,14 +125,16 @@ Click on PHP Manager
 <p>
 Register for the new PHP version.
 <p>
-<img src="https://imgur.com/qdbn5zQ.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/qdbn5zQ.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 Provide the path to the **PHP executable file** (**php-cgi.exe**).  
 
 Navigate to **C:\PHP** and select the **php-cgi.exe** file.
 <p>
-<img src="https://imgur.com/oJZ0gp9.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oJZ0gp9.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 Restart the IIS server.
@@ -155,12 +150,14 @@ Reload IIS again.
 14.) On IIS go to sites -> Default -> osTicket
 -On the right, click “Browse *:80”
 <p>
-<img src="https://imgur.com/Yw55d5b.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Yw55d5b.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 Some extensions are not enabled on the osTicket browser.
 <p>
-<img src="https://imgur.com/eJIsGTn.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/eJIsGTn.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 To enable the extensions:  
@@ -168,11 +165,13 @@ To enable the extensions:
 1. Open **IIS** and navigate to **Sites → Default → osTicket**.  
 2. Double-click **PHP Manager**.  
 3. Select **"Enable or disable an extension."**
-<img src="https://imgur.com/vvTLNBH.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vvTLNBH.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 <p>
-<img src="https://imgur.com/uigyKjb.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/uigyKjb.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 We will want to enable three extensions from here.
@@ -180,7 +179,8 @@ We will want to enable three extensions from here.
 2.) php_intl.dll
 3.) php_opcache.dll
 <p>
-<img src="https://imgur.com/cOem7Nb.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cOem7Nb.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 15. Once those extensions are enabled in IIS, the next step is to rename a file in the **osTicket** folder.  
@@ -193,12 +193,14 @@ We will want to enable three extensions from here.
 5. Choose to **remove all inherited permissions** from this object.  
 6. Click **Add** to set new permissions.
 <p>
-<img src="https://imgur.com/VPZvOdo.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/VPZvOdo.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 Select a principal
 <p>
-<img src="https://imgur.com/PoGk34d.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/PoGk34d.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 Type "Everyone" in the box.
@@ -220,7 +222,8 @@ Click Apply and Ok.
 Once complete, continue setting up **osTicket** in the browser. Click **Continue** and fill out the required fields, except for **Database Settings**—we’ll handle that later.
 Next, download and install **HeidiSQL** from the installation files.
 <p>
-<img src="https://imgur.com/i7a4gWC.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/i7a4gWC.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 </p>
 <p>
 Once the program is open, we will create a new session.
@@ -267,4 +270,3 @@ The final step is to log in to **osTicket** through the browser.
 
 </p>
 <p>
-Congrats! You have now successfully installed and set up osTicket!
