@@ -108,13 +108,13 @@ Make the new root password: Password1
 
 </p>
 <p>
-11.) Now that we have the files downloaded and installed we will want to search for IIS in the Windows search bar. Open IIS as an Admin.
+11.) Now that we have the files downloaded and installed, search for IIS in the Windows search bar. Open IIS as an Admin.
 <p>
 <img src="https://imgur.com/gFmrka6.png" height=80% width=80% alt="Setting Up in Azure"/>
 
 </p>
 <p>
-12.) We will now want to register PHP from within IIS.
+12.)Next, register PHP in IIS.
 <p>
 <img src="https://imgur.com/nlD4F1L.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
@@ -128,7 +128,7 @@ Restart the IIS server.
 13.) Install osTicket 
 -Download osTicket from the Installation Files Folder
 -Extract and copy the "upload" folder to c:\inetpub\wwwroot
--Within c:\inetpub\root, Rename "upload" to "osTicket"
+-Within c:\inetpub\root, Rename "Upload" to "osTicket"
   <img src="https://imgur.com/op4Cs2g.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 
 Reload IIS again.
