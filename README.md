@@ -21,7 +21,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 1.) First, go to [https://portal.azure.com/] (https://portal.azure.com/) to create a virtual machine. Set it up with Windows 10 Pro, version 22H2. Make sure the virtual machine has at least 2 vCPUs and 16 GB of memory.
 
-2.) Once your virtual machine is created, connect to it using the **public IP address** assigned to the VM. Use the **Remote Desktop Connection** app to establish the connection.
+
+
+2.) Once your virtual machine is created, connect to it using the Public IP address assigned to the VM. Use the Remote Desktop Connection app to establish the connection.
 </p>
 <br />
 
@@ -66,12 +68,16 @@ It should look something like this:
 <img src="https://imgur.com/XdKGpGl.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
-5.)With IIS enabled, download and install **PHP Manager for IIS** (*PHPManagerForIIS_V1.5.0.msi*) from the installation files, then follow the installation wizard to complete the setup.
-6.) Next from the Installation Files, download and install the Rewrite Module (rewrite_amd64_en-US.msi)
-7.) Create a folder in the C drive called PHP.
-8.) From the installation files, download **PHP 7.3.8** (*php-7.3.8-nts-Win32-VC15-x86.zip*) and extract its contents into **C:\PHP**.  
+5.)With IIS enabled, download and install PHP Manager for IIS from the installation files, then follow the installation wizard to complete the setup.
+<img src="https://imgur.com/RuAUGw1.png" height="80%" width="80%" alt="Setting Up in Azure"/>
+  
+6.) Next from the Installation Files, download and install the Rewrite Module.
+<img src="https://imgur.com/465p9DH.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 
-If a warning appears, select **"Keep"** to proceed.
+7.) Create a folder in the C drive called PHP.
+8.) From the installation files, download PHP files and extract its contents into C:\PHP.  
+
+If a warning appears, select "Keep" to proceed.
 <p>
 <img src="https://i.imgur.com/xZv1Yhw.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
@@ -83,7 +89,7 @@ If a warning appears, select **"Keep"** to proceed.
 </p>
 <p>
 
-9.) After downloading and extracting the ZIP file into the **PHP** folder on the **C:** drive, download and install Microsoft C++ from the installation files. Follow the setup wizard to complete the installation.
+9.) After downloading and extracting the ZIP file into the PHP folder on the C: drive, download and install Microsoft C++ from the installation files. Follow the setup wizard to complete the installation.
 <img src="https://imgur.com/SocF97p.png" height="80%" width=80% alt="Setting Up in Azure"/>
 
 10.) Download and install MySQL
@@ -141,10 +147,9 @@ Some extensions are not enabled on the osTicket browser.
 <p>
 To enable the extensions:  
 
-1. Open **IIS** and navigate to **Sites → Default → osTicket**.  
-2. Double-click **PHP Manager**.  
-3. Select **"Enable or disable an extension."**
-<img src="https://i.imgur.com/vvTLNBH.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+1. Open IIS and navigate to Sites → Default → osTicket.  
+2. Double-click PHP Manager.  
+3. Select "Enable or disable an extension."
 
 </p>
 <p>
@@ -164,13 +169,13 @@ We will want to enable three extensions from here.
 <p>
 15. Once those extensions are enabled in IIS, the next step is to rename a file in the **osTicket** folder.  
 
-1. Open **File Explorer** and navigate to:  
-   **C:\inetpub\wwwroot\osTicket\include\ost-sample config.php**  
-2. Rename **ost-sampleconfig.php** to **ost-config.php**.  
-3. Right-click the renamed file and select **Properties**.  
-4. Go to the **Security** tab, click **Advanced**, and disable inheritance.  
-5. Choose to **remove all inherited permissions** from this object.  
-6. Click **Add** to set new permissions.
+1. Open File Explorer and navigate to:  
+   C:\inetpub\wwwroot\osTicket\include\ost-sample config.php  
+2. Rename ost-sampleconfig.php to ost-config.php.  
+3. Right-click the renamed file and select Properties.  
+4. Go to the Security tab, click Advanced, and disable inheritance.  
+5. Choose to remove all inherited permissions from this object.  
+6. Click Add to set new permissions.
 <p>
 <img src="https://i.imgur.com/VPZvOdo.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
@@ -198,8 +203,8 @@ Click Apply and Ok.
 
 </p>
 <p>
-Once complete, continue setting up **osTicket** in the browser. Click **Continue** and fill out the required fields, except for **Database Settings**—we’ll handle that later.
-Next, download and install **HeidiSQL** from the installation files.
+Once complete, continue setting up osTicket in the browser. Click Continue and fill out the required fields, except for Database Settings.
+Next, download and install HeidiSQL from the installation files.
 <p>
 <img src="https://i.imgur.com/i7a4gWC.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
@@ -218,22 +223,22 @@ Be sure the username is set to **root** and the password to **Password1**.
 <p>
 After connecting to the session, return to the browser to continue the setup. In **Database Settings**, set the username to **"root"** and the password to **"Password1."**  
 
-Next, create a new database in **HeidiSQL**:  
-1. In **HeidiSQL**, right-click on **"Unnamed"** in the left panel.  
-2. Select **"Create new" → "Database."**  
-3. Name the database **osTicket** and complete the setup.  
+Next, create a new database in HeidiSQL:  
+1. In HeidiSQL, right-click on *Unnamed" in the left panel.  
+2. Select "Create new" → "Database."
+3. Name the database osTicket and complete the setup.  
 
-After creating the database, go back to the **osTicket** setup page in the browser and enter **osTicket** in the **MySQL Database** field.
+After creating the database, go back to the osTicket** setup page in the browser and enter osTicket** in the MySQL Database field.
 <img src="https://i.imgur.com/0rG1AJm.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
 </p>
 <p>
 The final step is cleanup. Delete the **setup** folder from your system:  
 
-- **Delete:** *C:\inetpub\wwwroot\osTicket\setup*  
+- Delete: C:\inetpub\wwwroot\osTicket\setup*  
   *(Only delete the setup folder—do not remove anything else.)*  
 
-Then, set the **ost-config.php** file permissions back to **"Read" only**.
+Then, set the ost-config.php** file permissions back to "Read" only".
 <img src="https://i.imgur.com/wFr0pkK.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
 </p>
@@ -249,3 +254,4 @@ The final step is to log in to osTicket through the browser.
 
 </p>
 <p>
+<h2>osTicket Installed!</h2>
