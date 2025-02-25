@@ -48,10 +48,10 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-4.) You will want to install/enable IIS in Windows with CGI and Common HTTP Features
-- World Wide Web Services -> Application Development Features ->
-[X] CGI
-[X] Common HTTP Features
+4.)Enable IIS in Windows with CGI and Common HTTP Features:  
+
+- Go to World Wide Web Services > Application Development Features 
+- Check CGI and Common HTTP Features
 <p>
 <img src="https://imgur.com/6Y6VzZH.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
@@ -224,7 +224,7 @@ After connecting to the session, return to the browser to continue the setup. In
 
 Next, create a new database in HeidiSQL:  
 1. In HeidiSQL, right-click on "Unnamed" in the left panel.  
-2. Select "Create new" → "Database".
+2. Select "Create new" >"Database".
 3. Name the database osTicket and complete the setup.  
 
 After creating the database, go back to the osTicket** setup page in the browser and enter osTicket** in the MySQL Database field.
