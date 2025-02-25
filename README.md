@@ -221,11 +221,11 @@ Be sure the username is set to **root** and the password to **Password1**.
 
 </p>
 <p>
-After connecting to the session, return to the browser to continue the setup. In **Database Settings**, set the username to **"root"** and the password to **"Password1."**  
+After connecting to the session, return to the browser to continue the setup. In Database Settings, set the username to "root" and the password to "Password1."
 
 Next, create a new database in HeidiSQL:  
-1. In HeidiSQL, right-click on *Unnamed" in the left panel.  
-2. Select "Create new" → "Database."
+1. In HeidiSQL, right-click on "Unnamed" in the left panel.  
+2. Select "Create new" → "Database".
 3. Name the database osTicket and complete the setup.  
 
 After creating the database, go back to the osTicket** setup page in the browser and enter osTicket** in the MySQL Database field.
@@ -233,12 +233,12 @@ After creating the database, go back to the osTicket** setup page in the browser
 
 </p>
 <p>
-The final step is cleanup. Delete the **setup** folder from your system:  
+The final step is cleanup. Delete the setup folder from your system:  
 
-- Delete: C:\inetpub\wwwroot\osTicket\setup*  
-  *(Only delete the setup folder—do not remove anything else.)*  
+- Delete: C:\inetpub\wwwroot\osTicket\setup 
+  (Only delete the setup folder—do not remove anything else.)  
 
-Then, set the ost-config.php** file permissions back to "Read" only".
+Then, set the ost-config.php file permissions back to "Read" only".
 <img src="https://i.imgur.com/wFr0pkK.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
 </p>
