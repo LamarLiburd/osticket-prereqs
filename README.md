@@ -20,20 +20,19 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Project Walk-through</h2>
 
 1.) First, go to [https://portal.azure.com/] (https://portal.azure.com/) to create a virtual machine. Set it up with Windows 10 Pro, version 22H2. Make sure the virtual machine has at least 2 vCPUs and 16 GB of memory.
-
+<img src="https://i.imgur.com/MAhXK2e.png" alt="Disk Sanitization Steps" style="max-width: 80%; height: auto;">
 
 
 2.) Once your virtual machine is created, connect to it using the Public IP address assigned to the VM. Use the Remote Desktop Connection app to establish the connection.
 </p>
-<br />
+<br /><img src="https://i.imgur.com/Zf2jw07.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
 <p>
-<img src="https://i.imgur.com/MAhXK2e.png" alt="Disk Sanitization Steps" style="max-width: 80%; height: auto;">
 
 </p>
 <p>
 <p>
-<img src="https://i.imgur.com/Zf2jw07.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+
 
 </p>
 <p>
@@ -68,16 +67,16 @@ It should look something like this:
 <img src="https://imgur.com/XdKGpGl.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
-5.)With IIS enabled, download and install PHP Manager for IIS from the installation files, then follow the installation wizard to complete the setup.
+5.)With IIS enabled, download and install PHP Manager for IIS, then follow the wizard to complete the setup.
 <img src="https://imgur.com/RuAUGw1.png" height="80%" width="80%" alt="Setting Up in Azure"/>
   
-6.) Next from the Installation Files, download and install the Rewrite Module.
+6.) Next, download and install the Rewrite Module.
 <img src="https://imgur.com/465p9DH.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 
 7.) Create a folder in the C drive called PHP.
-8.) From the installation files, download PHP files and extract its contents into C:\PHP.  
 
-If a warning appears, select "Keep" to proceed.
+8.) Download and extract the PHP files to C:\PHP.
+If a warning appears, select "Keep anyway" to proceed.
 <p>
 <img src="https://i.imgur.com/xZv1Yhw.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
@@ -167,7 +166,7 @@ We will want to enable three extensions from here.
 
 </p>
 <p>
-15. Once those extensions are enabled in IIS, the next step is to rename a file in the **osTicket** folder.  
+15. Once those extensions are enabled in IIS, the next step is to rename a file in the osTicket folder.  
 
 1. Open File Explorer and navigate to:  
    C:\inetpub\wwwroot\osTicket\include\ost-sample config.php  
