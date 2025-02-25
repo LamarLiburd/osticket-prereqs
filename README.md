@@ -17,10 +17,6 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Windows 10</b> (21H2)
 
-<h2>List of Prerequisites</h2>
-
-- 
-
 <h2>Project Walk-through</h2>
 
 1.)First, go to [https://portal.azure.com/](https://portal.azure.com/) to create a virtual machine. Set it up with **Windows 10 Pro, version 22H2**. Make sure the virtual machine has at least **2 vCPUs** and **16 GB of memory**.
@@ -264,7 +260,7 @@ Then, set the **ost-config.php** file permissions back to **"Read" only**.
 
 </p>
 <p>
-The final step is to log in to **osTicket** through the browser.
+The final step is to log in to osTicket through the browser.
 <p>
 <img src="https://i.imgur.com/uHVdDsx.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
