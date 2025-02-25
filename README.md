@@ -19,7 +19,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Project Walk-through</h2>
 
-1.)First, go to [https://portal.azure.com/](https://portal.azure.com/) to create a virtual machine. Set it up with **Windows 10 Pro, version 22H2**. Make sure the virtual machine has at least **2 vCPUs** and **16 GB of memory**.
+1.) First, go to [https://portal.azure.com/] (https://portal.azure.com/) to create a virtual machine. Set it up with Windows 10 Pro, version 22H2. Make sure the virtual machine has at least 2 vCPUs and 16 GB of memory.
 
 2.) Once your virtual machine is created, connect to it using the **public IP address** assigned to the VM. Use the **Remote Desktop Connection** app to establish the connection.
 </p>
@@ -35,7 +35,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-3.) Once connected to your virtual machine you will want to go to your control panel. From the control panel open up programs. Select and turn Windows features on and off.
+3.) Once connected to your virtual machine, go into your Control Panel, open Programs, and select Turn Windows Features On or Off.
 
 <p>
 <img src="https://i.imgur.com/fGXMpx4.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
@@ -52,8 +52,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 [X] CGI
 [X] Common HTTP Features
 <p>
-<img src="https://i.imgur.com/LQjw9le.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
-
+<img src="https://imgur.com/6Y6VzZH.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
 <p>
@@ -61,12 +60,10 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-Ensure that all **Common HTTP Features** are selected.
-To make sure the IIS is installed/enabled go to a browser of your choice and search for 127.0.0.1
-It should look something like this.
+To ensure the IIS is installed/enabled, go to the internet browser and search for 127.0.0.1 also known as the "loopback IP".
+It should look something like this:
 <p>
-<img src="https://i.imgur.com/eICujoq.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
-
+<img src="https://imgur.com/XdKGpGl.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
 5.)With IIS enabled, download and install **PHP Manager for IIS** (*PHPManagerForIIS_V1.5.0.msi*) from the installation files, then follow the installation wizard to complete the setup.
@@ -86,8 +83,12 @@ If a warning appears, select **"Keep"** to proceed.
 </p>
 <p>
 
-9.) After downloading and extracting the ZIP file into the **PHP** folder on the **C:** drive, download and install **VC_redist.x86.exe** from the installation files. Follow the setup wizard to complete the installation.
+9.) After downloading and extracting the ZIP file into the **PHP** folder on the **C:** drive, download and install Microsoft C++ from the installation files. Follow the setup wizard to complete the installation.
+<img src="https://imgur.com/SocF97p.png" height="80%" width=80% alt="Setting Up in Azure"/>
+
 10.) Download and install MySQL
+<img src="https://imgur.com/dFdQagT.png" height="80%" width="80%" alt="Setting Up in Azure"/>
+
 Run the setup wizard:
 Typical Setup ->
 Launch Configuration Wizard (after install) ->
@@ -95,59 +96,41 @@ Standard Configuration ->
 
 Make the new root password: Password1
 <p>
-<img src="https://i.imgur.com/KxcUy7C.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+<img src="https://imgur.com/SeJVW6M.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 
 </p>
 <p>
-Execute the process on the following page.
-<p>
-<img src="https://i.imgur.com/i7sn6hT.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
 
 </p>
 <p>
-11.) Now that we have the files downloaded and installed we will want to search for IIS in the Windows search bar. Open IIS as an administrator.
-The program should look like this.
+11.) Now that we have the files downloaded and installed we will want to search for IIS in the Windows search bar. Open IIS as an Admin.
 <p>
-<img src="https://i.imgur.com/rgdZwmM.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
+<img src="https://imgur.com/gFmrka6.png" height=80% width=80% alt="Setting Up in Azure"/>
 
 </p>
 <p>
 12.) We will now want to register PHP from within IIS.
-Click on PHP Manager
 <p>
-<img src="https://i.imgur.com/vvTLNBH.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
-
+<img src="https://imgur.com/nlD4F1L.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
-Register for the new PHP version.
-<p>
-<img src="https://i.imgur.com/qdbn5zQ.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
-
-</p>
-<p>
-Provide the path to the **PHP executable file** (**php-cgi.exe**).  
-
-Navigate to **C:\PHP** and select the **php-cgi.exe** file.
-<p>
-<img src="https://i.imgur.com/oJZ0gp9.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
-
-</p>
-<p>
+  
 Restart the IIS server.
 <p>
-<img src="https://imgur.com/CJ3RUbG.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/F83Qw2a.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
-13.) Install osTicket v1.18.2
+13.) Install osTicket 
 -Download osTicket from the Installation Files Folder
 -Extract and copy the "upload" folder to c:\inetpub\wwwroot
 -Within c:\inetpub\root, Rename "upload" to "osTicket"
+  <img src="https://imgur.com/op4Cs2g.png" height="80%" width="80%" alt="Setting Up in Azure"/>
+
 Reload IIS again.
-14.) On IIS go to sites -> Default -> osTicket
+ On IIS go to Sites> Default > osTicket
 -On the right, click “Browse *:80”
 <p>
-<img src="https://i.imgur.com/Yw55d5b.png" alt="Disk Sanitization Steps" style="max-width: 40%; height: auto;">
-
+<img src="https://imgur.com/JnqQOJD.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 </p>
 <p>
 Some extensions are not enabled on the osTicket browser.
